@@ -1,0 +1,32 @@
+[
+    {
+        "model": "swizzleapi.recipe",
+        "pk": 1,
+        "fields": {
+          "mixologist": 1,
+          "category": 2,
+          "name": "Perfect Arnold Palmer",
+          "publication_date": "2023-06-08",
+          "image_url": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
+          "directions": "1. Make lemonade: In a small pot over medium heat, bring 1 cup water and sugar to a boil, stirring to dissolve sugar. Let boil 2 minutes. Let cool to room temperature. \n 2. Combine simple syrup, remaining 2 cups water, and lemon juice. \n 3.Make tea: In a medium pot over medium-high heat, bring water to a boil. Add honey and stir to dissolve. Turn off heat and add tea bags. Let steep 5 minutes. Let cool to room temperature. \n 4. In a large pitcher, combine lemonade and tea. Pour into glasses over ice and garnish with mint and lemon wedges.",
+          "notes": null,
+          "serving": 1,
+          "approved": 1
+        }
+      },
+      {
+        "model": "swizzleapi.recipe",
+        "pk": 2,
+        "fields": {
+          "mixologist": 1,
+          "category": 1,
+          "name": "Piña Colada",
+          "publication_date": "2023-06-08",
+          "image_url": "https://www.thecocktaildb.com/images/media/drink/upgsue1668419912.jpg",
+          "directions": "1. Place frozen pineapple chunks and ice in a blender. Cut 2 of the slices into wedges. Set aside. Coarsely chop remaining pineapple. \n 2. Pour pineapple juice and coconut milk over top. Add brown sugar, if using. Puree until smooth. Taste to test the sweetness and add more sugar, if needed. \n 3. Pour into glasses and garnish with fresh pineapple wedges or a maraschino cherry.",
+          "notes": "No frozen pineapple? Try the coco colada recipe, which simply blends pineapple juice, cream of coconut, and ice. For more of a smoothie, add a scoop of ice cream. \n Unsweetened coconut cream is a great alternative to the milk; it simply doesn't have as much water. Cream of coconut is sweetened and richer and preferred for the original piña colada. \n Use coconut or palm sugar instead of brown sugar. If using a hard, cake-like form of either sugar, crush it with a mortar and pestle or muddler into a consistency like brown sugar. \n Liquid sweeteners are good options as well. Try 1 tablespoon of agave nectar, honey, or simple syrup and add more if needed.",
+          "serving": 1,
+          "approved": 1
+        }
+      }
+]

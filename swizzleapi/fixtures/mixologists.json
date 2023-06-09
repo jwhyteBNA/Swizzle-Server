@@ -1,0 +1,25 @@
+[
+    {
+        "model": "swizzleapi.mixologist",
+        "pk": 1,
+        "fields": {
+            "bio": "I make a mean mocktail, and can't wait for you to try my potions.",
+            "profile_image_url":"",
+            "created_on": "2023-05-16",
+            "active": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "swizzleapi.mixologist",
+        "pk": 2,
+        "fields": {
+            "bio": "I am best good boy and like to enjoy ice cubes.",
+            "profile_image_url":"",
+            "created_on": "2023-05-16",
+            "active": 1,
+            "user": 2
+        }
+    }
+
+]

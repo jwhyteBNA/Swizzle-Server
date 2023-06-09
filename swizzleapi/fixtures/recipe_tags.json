@@ -1,0 +1,50 @@
+[
+    {
+        "model": "swizzleapi.recipetag",
+        "pk": 1,
+        "fields": {
+            "tag": 7,
+            "recipe": 1
+        }
+    },
+    {
+        "model": "swizzleapi.recipetag",
+        "pk": 2,
+        "fields": {
+            "tag": 8,
+            "recipe": 1
+        }
+    },
+    {
+        "model": "swizzleapi.recipetag",
+        "pk": 3,
+        "fields": {
+            "tag": 11,
+            "recipe": 1
+        }
+    },
+    {
+        "model": "swizzleapi.recipetag",
+        "pk": 4,
+        "fields": {
+            "tag": 1,
+            "recipe": 2
+        }
+    },
+    {
+        "model": "swizzleapi.recipetag",
+        "pk": 5,
+        "fields": {
+            "tag": 13,
+            "recipe": 2
+        }
+    },
+    {
+        "model": "swizzleapi.recipetag",
+        "pk": 6,
+        "fields": {
+            "tag": 14,
+            "recipe": 2
+        }
+    }
+]

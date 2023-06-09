@@ -1,0 +1,12 @@
+[
+    {
+        "model": "swizzleapi.subscription",
+        "pk": 1,
+        "fields": {
+        "follower": 2,
+        "mixologist": 1,
+        "created_on": "2023-06-09",
+        "ended_on": null
+        }
+    }
+]

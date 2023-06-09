@@ -1,0 +1,102 @@
+[
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 1,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 23,
+            "measurement": 4,
+            "measured_amount": "1"
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 2,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 12,
+            "measurement": 4,
+            "measured_amount": 1
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 3,
+        "fields": {
+            "recipe": 1,
+            "ingredient": 36,
+            "measurement": 7,
+            "measured_amount": 5
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 4,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 77,
+            "measurement": 4,
+            "measured_amount": "1 1/2"
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 5,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 50,
+            "measurement": 4,
+            "measured_amount": "1/4"
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 6,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 57,
+            "measurement": 4,
+            "measured_amount": "3/4"
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 7,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 90,
+            "measurement": 1,
+            "measured_amount": 2
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 8,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 29,
+            "measurement": 4,
+            "measured_amount": "3/4"
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 9,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 99,
+            "measurement": 12,
+            "measured_amount": 3
+        }
+    },
+    {
+        "model": "swizzleapi.recipeingredient",
+        "pk": 10,
+        "fields": {
+            "recipe": 2,
+            "ingredient": 29,
+            "measurement": 4,
+            "measured_amount": "3/4"
+        }
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 1,
+        "fields": {
+        "unit_short": "Tbsp",
+        "unit_long": "Tablespoon",
+        "unit_plural": "Tablespoons"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 2,
+        "fields": {
+        "unit_short": "Tsp",
+        "unit_long": "Teaspoon",
+        "unit_plural": "Teaspoons"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 3,
+        "fields": {
+        "unit_short": "Can",
+        "unit_long": "Can",
+        "unit_plural": "Cans"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 4,
+        "fields": {
+        "unit_short": "C.",
+        "unit_long": "Cup",
+        "unit_plural": "Cup"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 5,
+        "fields": {
+        "unit_short": "Oz.",
+        "unit_long": "ounce",
+        "unit_plural": "ounces"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 6,
+        "fields": {
+        "unit_short": "Gal",
+        "unit_long": "gallon",
+        "unit_plural": "gallons"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 7,
+        "fields": {
+        "unit_short": "Sprig",
+        "unit_long": "Sprig",
+        "unit_plural": "Sprigs"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 8,
+        "fields": {
+        "unit_short": "Handful",
+        "unit_long": "handful",
+        "unit_plural": "handfuls"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 9,
+        "fields": {
+        "unit_short": "Pinch",
+        "unit_long": "Pinch",
+        "unit_plural": "Pinches"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 10,
+        "fields": {
+        "unit_short": "Single",
+        "unit_long": "Single",
+        "unit_plural": "Single"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 11,
+        "fields": {
+        "unit_short": "Wedge",
+        "unit_long": "Wedge",
+        "unit_plural": "Wedges"
+            }
+    },
+    {
+        "model": "swizzleapi.measurement",
+        "pk": 12,
+        "fields": {
+        "unit_short": "Whole",
+        "unit_long": "Whole",
+        "unit_plural": "Whole"
+            }
+    }
+]

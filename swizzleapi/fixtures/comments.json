@@ -1,0 +1,13 @@
+[
+    {
+        "model": "swizzleapi.comment",
+        "pk": 1,
+        "fields": {
+        "recipe": 1,
+        "mixologist": 2,
+        "content": "This looks positively refreshing!",
+        "image_url": null,
+        "created_on": "2023-06-08"
+        }
+    }
+]

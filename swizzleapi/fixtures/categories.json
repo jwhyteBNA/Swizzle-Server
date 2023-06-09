@@ -1,0 +1,34 @@
+[
+    {
+        "model": "swizzleapi.category",
+        "pk": 1,
+        "fields": {
+        "name": "Mocktail",
+        "description": "A zero-proof version of a classic cocktail"
+        }
+    },
+    {
+        "model": "swizzleapi.category",
+        "pk": 2,
+        "fields": {
+        "name": "New Classics",
+        "description": "Standards in the Swizzle pantheon - not based on a traditional cocktail."
+        }
+    },
+    {
+        "model": "swizzleapi.category",
+        "pk": 3,
+        "fields": {
+        "name": "Experimental",
+        "description": "For those creatives concocting a whole new realm of beverage."
+        }
+    },
+    {
+        "model": "swizzleapi.category",
+        "pk": 4,
+        "fields": {
+        "name": "Other",
+        "description": "If you can't decide, this might be the label for your drink!"
+        }
+    }
+]

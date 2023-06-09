@@ -1,0 +1,100 @@
+[
+    {
+        "model": "swizzleapi.tag",
+        "pk": 1,
+        "fields": {
+        "label": "Fruity"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 2,
+        "fields": {
+        "label": "Herbal"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 3,
+        "fields": {
+        "label": "Spicy"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 4,
+        "fields": {
+        "label": "Bold"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 5,
+        "fields": {
+        "label": "Bubbly"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 6,
+        "fields": {
+        "label": "Warm"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 7,
+        "fields": {
+        "label": "Cold"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 8,
+        "fields": {
+        "label": "Refreshing"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 9,
+        "fields": {
+        "label": "Holiday"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 10,
+        "fields": {
+        "label": "Year-Round"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 11,
+        "fields": {
+        "label": "Party-Friendly"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 12,
+        "fields": {
+        "label": "Good with Food"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 13,
+        "fields": {
+        "label": "Fancy"
+        }
+    },
+    {
+        "model": "swizzleapi.tag",
+        "pk": 14,
+        "fields": {
+        "label": "Date Night"
+        }
+    }
+]

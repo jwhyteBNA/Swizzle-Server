@@ -1,0 +1,704 @@
+[
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 1,
+        "fields": {
+        "name": "Water"
+            }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 2,
+        "fields": {
+        "name": "Milk"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 3,
+        "fields": {
+        "name": "Coffee"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 4,
+        "fields": {
+        "name": "Espresso"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 5,
+        "fields": {
+        "name": "Hot Chocolate"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 6,
+        "fields": {
+        "name": "Cocoa Powder"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 7,
+        "fields": {
+        "name": "Granulated Sugar"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 8,
+        "fields": {
+        "name": "Cream"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 9,
+        "fields": {
+        "name": "Half and Half"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 10,
+        "fields": {
+        "name": "Green Tea"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 11,
+        "fields": {
+        "name": "Lime Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 12,
+        "fields": {
+        "name": "Black Tea"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 13,
+        "fields": {
+        "name": "Tonic Water"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 14,
+        "fields": {
+        "name": "Lemon-Lime Soda"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 15,
+        "fields": {
+        "name": "Club Soda"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 16,
+        "fields": {
+        "name": "Ginger Ale"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 17,
+        "fields": {
+        "name": "Orange Soda"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 18,
+        "fields": {
+        "name": "Cola"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 19,
+        "fields": {
+        "name": "Root Beer"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 20,
+        "fields": {
+        "name": "Cream Soda"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 21,
+        "fields": {
+        "name": "Dr. Pepper"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 22,
+        "fields": {
+        "name": "Limeade"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 23,
+        "fields": {
+        "name": "Lemonade"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 24,
+        "fields": {
+        "name": "Tang"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 25,
+        "fields": {
+        "name": "Grapefruit Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 26,
+        "fields": {
+        "name": "Cranberry Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 27,
+        "fields": {
+        "name": "Apple Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 28,
+        "fields": {
+        "name": "Orange Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 29,
+        "fields": {
+        "name": "Pineapple Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 30,
+        "fields": {
+        "name": "Lemon Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 31,
+        "fields": {
+        "name": "Lime Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 32,
+        "fields": {
+        "name": "Tomato Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 33,
+        "fields": {
+        "name": "Basil Leaves"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 34,
+        "fields": {
+        "name": "Fresh Ginger"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 35,
+        "fields": {
+        "name": "Pineapple Sage Leaves"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 36,
+        "fields": {
+        "name": "Mint Leaves"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 37,
+        "fields": {
+        "name": "Sage Leaves"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 38,
+        "fields": {
+        "name": "Sage Leaves"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 39,
+        "fields": {
+        "name": "Cilantro"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 40,
+        "fields": {
+        "name": "Parsley"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 41,
+        "fields": {
+        "name": "Simple Syrup"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 42,
+        "fields": {
+        "name": "Rich Simple Syrup"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 43,
+        "fields": {
+        "name": "Chocolate Syrup"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 44,
+        "fields": {
+        "name": "Strawberry Syrup"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 45,
+        "fields": {
+        "name": "Caramel Syrup"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 46,
+        "fields": {
+        "name": "Vanilla Syrup"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 47,
+        "fields": {
+        "name": "Apple Cider"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 48,
+        "fields": {
+        "name": "Vanilla Ice Cream"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 49,
+        "fields": {
+        "name": "Sherbet"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 50,
+        "fields": {
+        "name": "Ice Cubes"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 51,
+        "fields": {
+        "name": "Cinnamon"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 52,
+        "fields": {
+        "name": "Nutmeg"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 53,
+        "fields": {
+        "name": "Cloves"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 54,
+        "fields": {
+        "name": "Ginger Beer"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 55,
+        "fields": {
+        "name": "Coconut Cream"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 56,
+        "fields": {
+        "name": "Coconut Water"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 57,
+        "fields": {
+        "name": "Coconut Milk"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 58,
+        "fields": {
+        "name": "Cardamom"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 59,
+        "fields": {
+        "name": "Maple Syrup"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 60,
+        "fields": {
+        "name": "Honey"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 61,
+        "fields": {
+        "name": "Agave"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 62,
+        "fields": {
+        "name": "Frozen Limeade"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 63,
+        "fields": {
+        "name": "Frozen Lemonade"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 64,
+        "fields": {
+        "name": "Cider Vinegar"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 65,
+        "fields": {
+        "name": "Kombucha"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 66,
+        "fields": {
+        "name": "Yogurt"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 67,
+        "fields": {
+        "name": "Egg"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 68,
+        "fields": {
+        "name": "Egg Yolk"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 69,
+        "fields": {
+        "name": "Egg White"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 70,
+        "fields": {
+        "name": "Fruit Juice Nectar"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 71,
+        "fields": {
+        "name": "Grape Juice"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 72,
+        "fields": {
+        "name": "Rosemary"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 73,
+        "fields": {
+        "name": "Blueberries"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 74,
+        "fields": {
+        "name": "Strawberries"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 75,
+        "fields": {
+        "name": "Cranberries"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 76,
+        "fields": {
+        "name": "Peaches"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 77,
+        "fields": {
+        "name": "Pineapple"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 78,
+        "fields": {
+        "name": "Lemon"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 79,
+        "fields": {
+        "name": "Lime"
+        }
+    },
+        {
+        "model": "swizzleapi.ingredient",
+        "pk": 80,
+        "fields": {
+        "name": "Orange"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 81,
+        "fields": {
+        "name": "Watermelon"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 82,
+        "fields": {
+        "name": "Cantaloupe"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 83,
+        "fields": {
+        "name": "Honeydew"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 84,
+        "fields": {
+        "name": "Cucumber"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 85,
+        "fields": {
+        "name": "Mango"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 86,
+        "fields": {
+        "name": "Grapes"
+        }
+    },
+        {
+        "model": "swizzleapi.ingredient",
+        "pk": 87,
+        "fields": {
+        "name": "Kiwi"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 88,
+        "fields": {
+        "name": "Angostura Bitters"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 89,
+        "fields": {
+        "name": "Bitters"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 90,
+        "fields": {
+        "name": "Brown Sugar"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 91,
+        "fields": {
+        "name": "Demerara Sugar"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 92,
+        "fields": {
+        "name": "Worcester Sauce"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 93,
+        "fields": {
+        "name": "Tabasco Sauce"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 94,
+        "fields": {
+        "name": "Celery Salt"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 95,
+        "fields": {
+        "name": "Salt"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 96,
+        "fields": {
+        "name": "Pepper"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 97,
+        "fields": {
+        "name": "Fruit Puree"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 98,
+        "fields": {
+        "name": "Sparkling Water"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 99,
+        "fields": {
+        "name": "Maraschino Cherries"
+        }
+    },
+    {
+        "model": "swizzleapi.ingredient",
+        "pk": 100,
+        "fields": {
+        "name": "Luxardo Cherry"
+        }
+    }
+]
+
+
