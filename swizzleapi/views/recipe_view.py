@@ -110,7 +110,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     """JSON serializer for posts"""
     class Meta:
         model = Recipe
-        fields = ('id', 'mixologist', 'category', 'name', 'publication_date', 'image_url', 'ingredients', 'directions', 'notes', 'serving', 'approved', 'tag')
+        fields = ('id', 'mixologist', 'category', 'name', 'publication_date', 'image_url', 'ingredients', 'directions', 'notes', 'servings', 'approved', 'tag')
         depth = 2
 
 class CreateRecipeSerializer(serializers.ModelSerializer):
