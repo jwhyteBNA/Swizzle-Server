@@ -8,9 +8,11 @@
           "name": "Perfect Arnold Palmer",
           "publication_date": "2023-06-08",
           "image_url": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
+          "ingredients": "FOR THE LEMONADE \n 3 cups water, divided \n 3/4 cup granulated sugar \n Juice of 6 large lemons (about 3/4 cup) \n\n FOR THE TEA \n 4 c. water \n 1/3 c. honey \n 5 black tea bags \n Ice \n Fresh mint \n Lemon wedges",
           "directions": "1. Make lemonade: In a small pot over medium heat, bring 1 cup water and sugar to a boil, stirring to dissolve sugar. Let boil 2 minutes. Let cool to room temperature. \n 2. Combine simple syrup, remaining 2 cups water, and lemon juice. \n 3.Make tea: In a medium pot over medium-high heat, bring water to a boil. Add honey and stir to dissolve. Turn off heat and add tea bags. Let steep 5 minutes. Let cool to room temperature. \n 4. In a large pitcher, combine lemonade and tea. Pour into glasses over ice and garnish with mint and lemon wedges.",
           "notes": null,
-          "serving": 1,
+          "servings": 1,
+          "original_link": "https://www.delish.com/cooking/recipe-ideas/a29813418/arnold-palmer-drink-recipe/",
           "approved": 1
         }
       },
@@ -23,9 +25,11 @@
           "name": "Piña Colada",
           "publication_date": "2023-06-08",
           "image_url": "https://www.thecocktaildb.com/images/media/drink/upgsue1668419912.jpg",
+          "ingredients": "1 1/2 cups unsweetened frozen pineapple chunks \n 1/4 cup ice \n 3/4 cup unsweetened pineapple juice \n 3/4 cup unsweetened coconut milk \n 1 to 3 tablespoons brown sugar, optional \n Fresh pineapple wedges, garnish \n Maraschino cherries, garnish",
           "directions": "1. Place frozen pineapple chunks and ice in a blender. Cut 2 of the slices into wedges. Set aside. Coarsely chop remaining pineapple. \n 2. Pour pineapple juice and coconut milk over top. Add brown sugar, if using. Puree until smooth. Taste to test the sweetness and add more sugar, if needed. \n 3. Pour into glasses and garnish with fresh pineapple wedges or a maraschino cherry.",
           "notes": "No frozen pineapple? Try the coco colada recipe, which simply blends pineapple juice, cream of coconut, and ice. For more of a smoothie, add a scoop of ice cream. \n Unsweetened coconut cream is a great alternative to the milk; it simply doesn't have as much water. Cream of coconut is sweetened and richer and preferred for the original piña colada. \n Use coconut or palm sugar instead of brown sugar. If using a hard, cake-like form of either sugar, crush it with a mortar and pestle or muddler into a consistency like brown sugar. \n Liquid sweeteners are good options as well. Try 1 tablespoon of agave nectar, honey, or simple syrup and add more if needed.",
-          "serving": 1,
+          "servings": 2,
+          "original_link": "https://www.thespruceeats.com/virgin-pina-colada-recipe-2097115",
           "approved": 1
         }
       }
