@@ -1,10 +1,11 @@
 # from django.http import HttpResponseServerError
+from django.db import transaction
 from django.db.models import Q
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from rest_framework.decorators import action
-from swizzleapi.models import Recipe, Mixologist, Category, Tag
+from swizzleapi.models import Recipe, Mixologist, Category, Tag, Ingredient, Measurement, RecipeIngredient
 
 class RecipeView(ViewSet):
 
@@ -19,8 +20,8 @@ class RecipeView(ViewSet):
         user = Mixologist.objects.get(user=request.auth.user)
 
         if user:
-            subscribed_mixologists = user.subscriptions.filter(ended_on__isnull=True).values_list('mixologist', flat=True)
-            recipes = Recipe.objects.filter(user__id__in=subscribed_mixologists )
+            # subscribed_mixologists = user.subscriptions.filter(ended_on__isnull=True).values_list('mixologist', flat=True)
+            # recipes = Recipe.objects.filter(user__id__in=subscribed_mixologists )
 
             mixologist = request.query_params.get('mixologist', None)
             if mixologist is not None:
@@ -52,7 +53,25 @@ class RecipeView(ViewSet):
         mixologist = Mixologist.objects.get(user=request.auth.user)
         serializer = CreateRecipeSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        saved_recipe = serializer.save(user=mixologist)
+
+        with transaction.atomic():
+            saved_recipe = serializer.save(user=mixologist)
+            ingredients = request.data.get('ingredients', [])
+
+            for ingredient_data in ingredients:
+                ingredient_id = ingredient_data.get('ingredient')
+                measurement_id = ingredient_data.get('measurement')
+                measured_amount = ingredient_data.get('measured_amount')
+
+                measurement = Measurement.objects.get(pk=measurement_id)
+
+                RecipeIngredient.objects.create(
+                    recipe=saved_recipe,
+                    ingredient_id=ingredient_id,
+                    measurement=measurement,
+                    measured_amount=measured_amount
+                )
+
         saved_recipe.tag.set(request.data['tag'])
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -110,8 +129,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     """JSON serializer for posts"""
     class Meta:
         model = Recipe
-        fields = ('id', 'mixologist', 'category', 'name', 'publication_date', 'image_url', 'ingredients', 'directions', 'notes', 'serving', 'approved', 'tag')
-        depth = 2
+        fields = ('id', 'mixologist', 'category', 'name', 'publication_date', 'image_url', 'ingredients_used', 'directions', 'notes', 'serving', 'approved', 'tag')
 
 class CreateRecipeSerializer(serializers.ModelSerializer):
     class Meta:

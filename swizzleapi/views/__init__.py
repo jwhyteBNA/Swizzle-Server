@@ -5,3 +5,4 @@ from .ingredient_view import IngredientView
 from .mixologist_view import MixologistView
 from .recipe_view import RecipeView
 from .tag_view import TagView
+from .measurement_view import MeasurementView

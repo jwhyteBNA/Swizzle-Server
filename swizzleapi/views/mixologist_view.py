@@ -30,6 +30,16 @@ class MixologistView(ViewSet):
         mixologists = Mixologist.objects.all()
         serializer = MixologistSerializer(mixologists, many=True)
         return Response(serializer.data)
+    
+    def update(self, request, pk=None):
+        """Handle PUT request for update"""
+        mixologist = Mixologist.objects.get(pk=pk)
+        
+        mixologist.bio = request.data['bio']
+        mixologist.profile_image_url = request.data['profile_image_url']
+        mixologist.active = request.data['active']
+        mixologist.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
     @action(methods=['post', 'put'], detail=True)
     def subscribe(self, request, pk):
@@ -52,6 +62,23 @@ class MixologistView(ViewSet):
         subscription.ended_on = datetime.now()
         subscription.save()
         return Response({'message': 'Unsubscribed'}, status=status.HTTP_204_NO_CONTENT)
+
+    @action(methods=['get', 'put'], detail=False)
+    def myprofile(self, request):
+        """Get method for user profile"""
+        user = Mixologist.objects.get(user=request.auth.user)
+        profile = Mixologist.objects.filter(user=user)
+    
+        if request.method == 'GET':
+            serializer = MixologistSerializer(profile, many=False)
+            return Response(serializer.data)
+        elif request.method =='PUT':
+            update_profile = Mixologist.objects.get(user=request.auth.user)
+            update_profile.bio = request.data['bio']
+            update_profile.profile_image_url = request.data['profile_image_url']
+            update_profile.save()
+            return Response({'message': 'Update successful'}, status=status.HTTP_204_NO_CONTENT)
+
 
 class MixologistSerializer(serializers.ModelSerializer):
     """JSON serializer for users

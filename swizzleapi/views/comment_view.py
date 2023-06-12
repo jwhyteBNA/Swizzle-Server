@@ -55,10 +55,10 @@ class CommentView(ViewSet):
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ('id', 'post_id', 'author', 'content', 'image_url','created_on')
+        fields = ('id', 'recipe_id', 'mixologist', 'content', 'image_url','created_on')
         depth = 2
 
 class CreateCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ('id', 'post', 'content', 'image_url', 'created_on')
+        fields = ('id', 'recipe', 'content', 'image_url', 'created_on')

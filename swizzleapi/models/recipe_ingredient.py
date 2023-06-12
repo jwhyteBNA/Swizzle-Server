@@ -2,7 +2,7 @@ from fractions import Fraction
 from django.db import models
 
 class RecipeIngredient(models.Model):
-    recipe = models.ForeignKey("Recipe", on_delete=models.CASCADE)
+    recipe = models.ForeignKey("Recipe", on_delete=models.CASCADE, related_name = "ingredients")
     ingredient = models.ForeignKey("Ingredient", on_delete=models.CASCADE)
     measurement = models.ForeignKey("Measurement", on_delete=models.CASCADE)
     measured_amount = models.CharField(max_length=20)
