@@ -10,11 +10,7 @@ from swizzleapi.models import Mixologist
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login_user(request):
-    '''Handles the authentication of a mixologist
-
-    Method arguments:
-      request -- The full HTTP request object
-    '''
+    '''Handles the authentication of a mixologist'''
     username = request.data['username']
     password = request.data['password']
 
@@ -34,11 +30,7 @@ def login_user(request):
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def register_user(request):
-    '''Handles the creation of a new mixologist for authentication
-
-    Method arguments:
-    request -- The full HTTP request object
-    '''
+    '''Handles the creation of a new mixologist for authentication'''
 
     new_user = User.objects.create_user(
         username=request.data['username'],

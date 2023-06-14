@@ -6,3 +6,12 @@ class Comment(models.Model):
     content = models.CharField(max_length=255)
     image_url = models.TextField(null=True, blank=True)
     created_on = models.DateField(null=False, blank=False, auto_now=False, auto_now_add=True)
+
+    @property
+    def can_edit(self):
+        """Checking for edit authority"""
+        return self.__can_edit
+
+    @can_edit.setter
+    def can_edit(self, value):
+        self.__can_edit = value

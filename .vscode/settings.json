@@ -20,6 +20,7 @@
         "mccabe",
         "Mocktail",
         "myrecipes",
+        "mysubscriptions",
         "piña",
         "Piña",
         "pipfile",
@@ -33,6 +34,7 @@
         "sqlparse",
         "swizzleapi",
         "tomlkit",
+        "unfavorited",
         "viewsets",
         "Whyte"
     ],
