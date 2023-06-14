@@ -37,10 +37,10 @@ class MixologistView(ViewSet):
         author = Mixologist.objects.get(pk=pk)
         subscriber = Mixologist.objects.get(pk=request.auth.user.id)
         if request.method == 'POST':
-            Subscription.objects.create(author=author, follower=subscriber, ended_on = None)
+            Subscription.objects.create(mixologist=author, follower=subscriber, ended_on = None)
             return Response({'message': 'Subscribed to author!'}, status=status.HTTP_201_CREATED)
         elif request.method =='PUT':
-            update_subscription = Subscription.objects.get(author=author, follower=subscriber)
+            update_subscription = Subscription.objects.get(mixologist=author, follower=subscriber)
             update_subscription.ended_on = None
             update_subscription.save()
             return Response({'message': 'Resubscribed!'}, status=status.HTTP_204_NO_CONTENT)
@@ -48,7 +48,7 @@ class MixologistView(ViewSet):
     @action(methods=['put'], detail=True)
     def unsubscribe(self, request, pk):
         """Put request so user can unsubscribe from an author"""
-        subscription = Subscription.objects.get(author=pk, follower=request.auth.user.id)
+        subscription = Subscription.objects.get(mixologist=pk, follower=request.auth.user.id)
         subscription.ended_on = datetime.now()
         subscription.save()
         return Response({'message': 'Unsubscribed'}, status=status.HTTP_204_NO_CONTENT)

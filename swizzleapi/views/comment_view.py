@@ -15,10 +15,18 @@ class CommentView(ViewSet):
     def list(self, request):
         """Handle GET request for all comments"""
         comments = Comment.objects.all()
+        mixologist = Mixologist.objects.get(user=request.auth.user)
 
         recipe_id = request.query_params.get('recipe_id', None)
         if recipe_id is not None:
             comments = comments.filter(recipe_id=recipe_id)
+            for comment in comments:
+                if comment.mixologist == mixologist:
+                    comment.can_edit = True
+                elif mixologist.user.is_staff:
+                    comment.can_edit = True
+                else:
+                    comment.can_edit = False
 
         serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)
@@ -51,14 +59,13 @@ class CommentView(ViewSet):
         comment.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
-
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ('id', 'post_id', 'author', 'content', 'image_url','created_on')
+        fields = ('id', 'recipe', 'mixologist', 'content', 'image_url','created_on', 'can_edit')
         depth = 2
 
 class CreateCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ('id', 'post', 'content', 'image_url', 'created_on')
+        fields = ('id', 'recipe', 'content', 'image_url', 'created_on')
