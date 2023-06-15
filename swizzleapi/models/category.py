@@ -6,3 +6,12 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
+
+    @property
+    def can_edit(self):
+        """Checking for edit authority"""
+        return self.__can_edit
+
+    @can_edit.setter
+    def can_edit(self, value):
+        self.__can_edit = value
