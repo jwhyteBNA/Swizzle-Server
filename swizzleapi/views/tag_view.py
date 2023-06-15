@@ -1,20 +1,34 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from swizzleapi.models import Tag
+from swizzleapi.models import Tag, Mixologist
 
 class TagView(ViewSet):
     """Tags view"""
 
     def retrieve(self, request, pk):
         """Handle GET requests for a single tag"""
+        mixologist = Mixologist.objects.get(user=request.auth.user)
         tag = Tag.objects.get(pk=pk)
+        if mixologist.user.is_staff:
+            tag.can_edit = True
+        else:
+            tag.can_edit = False
         serializer = TagSerializer(tag)
         return Response(serializer.data)
 
     def list(self, request):
         """Handle GET requests to get list of tags"""
+        mixologist = Mixologist.objects.get(user=request.auth.user)
+
         tags = Tag.objects.all()
+
+        for tag in tags:
+            if mixologist.user.is_staff:
+                tag.can_edit = True
+            else:
+                tag.can_edit = False
+
         serializer = TagSerializer(tags, many=True)
         return Response(serializer.data)
 
@@ -48,4 +62,4 @@ class TagSerializer(serializers.ModelSerializer):
     """JSON serializer for tags"""
     class Meta:
         model = Tag
-        fields = ('id', 'label')
+        fields = ('id', 'label', 'can_edit')
