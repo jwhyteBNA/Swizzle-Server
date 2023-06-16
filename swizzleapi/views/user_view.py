@@ -27,3 +27,16 @@ class UserView(ViewSet):
         users = User.objects.all().order_by('username')
         serializer = UserSerializer(users, many=True)
         return Response(serializer.data)
+
+    def update(self, request, pk):
+        """Handle PUT requests for a recipe"""
+
+        user = User.objects.get(pk=request.auth.user)
+        user.first_name = request.data["first_name"]
+        user.last_name = request.data["[last_name]"]
+        user.username = request.data["[username]"]
+        user.email = request.data["[email]"]
+
+        user.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)

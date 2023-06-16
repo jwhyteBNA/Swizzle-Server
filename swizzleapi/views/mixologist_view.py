@@ -31,6 +31,17 @@ class MixologistView(ViewSet):
         serializer = MixologistSerializer(mixologists, many=True)
         return Response(serializer.data)
 
+    def update(self, request, pk=None):
+        """Handle PUT requests for a recipe"""
+
+        mixologist = Mixologist.objects.get(user=request.auth.user)
+        mixologist.bio = request.data["bio"]
+        mixologist.profile_image_url = request.data["[profile_image_url]"]
+
+        mixologist.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
     @action(methods=['post', 'put'], detail=True)
     def subscribe(self, request, pk):
         """Post and Put Requests so user can subscribe to other users"""
