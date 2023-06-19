@@ -1,5 +1,6 @@
 # from django.http import HttpResponseServerError
 from django.db.models import Q
+from django.db.models import Count
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
@@ -11,7 +12,7 @@ class RecipeView(ViewSet):
     def retrieve(self, request, pk):
         """GET request for single recipe"""
         mixologist = Mixologist.objects.get(user=request.auth.user)
-        recipe = Recipe.objects.get(pk=pk)
+        recipe = Recipe.objects.annotate(favorites_count=Count('favorites')).get(pk=pk)
 
         if recipe.mixologist == mixologist:
             recipe.can_edit = True
@@ -26,7 +27,10 @@ class RecipeView(ViewSet):
     def list(self, request):
         """Handle GET requests to get all recipes"""
         mixologist = Mixologist.objects.get(user=request.auth.user)
-        recipes = Recipe.objects.all()
+        recipes = Recipe.objects.annotate(
+                favorites_count=Count('favorites'),
+                is_favorite=Count('favorites',filter=Q(favorites=mixologist)
+                ))
 
         for recipe in recipes:
             if recipe.mixologist == mixologist:
@@ -144,7 +148,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     """JSON serializer for posts"""
     class Meta:
         model = Recipe
-        fields = ('id', 'name', 'publication_date', 'image_url', 'ingredients', 'directions', 'notes', 'servings', 'approved', 'can_edit', 'original_link', 'category','tag', 'mixologist')
+        fields = ('id', 'name', 'publication_date', 'image_url', 'ingredients', 'directions', 'notes', 'servings', 'approved', 'can_edit', 'original_link', 'category','tag', 'mixologist', 'favorites', 'is_favorite')
         depth = 2
 
 class CreateRecipeSerializer(serializers.ModelSerializer):

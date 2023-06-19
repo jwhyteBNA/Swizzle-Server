@@ -23,7 +23,8 @@ Master Mixologist Admins
 * Have gatekeeper status of user content like comments or photos. 
 
 ### ERD
-<img src="./ERD-Swizzle.png" alt="ERD for Swizzle & Salud App">
+![ERD - Swizzle](./ERDSwizzle.png)
+
 
 ### Client Side Code
 <a href="https://github.com/jwhyteBNA/swizzle-client" target="_blank"><img src="https://img.shields.io/badge/Click_here%20-%236ae689.svg?&style=for-the-badge&&logoColor=white" alt="Swizzle&Salud Client-side Repo" style="height: auto !important; width: auto !important;" /></a>
