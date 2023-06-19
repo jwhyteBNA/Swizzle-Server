@@ -46,6 +46,10 @@ class RecipeView(ViewSet):
         if category is not None:
             recipes = recipes.filter(category_id=category)
 
+        is_favorite = request.query_params.get('is_favorite', None)
+        if is_favorite is not None:
+            recipes = recipes.filter(is_favorite=True)
+
         tag = request.query_params.get('tag', None)
         if tag is not None:
             tag_array = [int(t) for t in tag.split(',')]
