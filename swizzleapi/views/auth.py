@@ -46,5 +46,5 @@ def register_user(request):
     )
 
     token = Token.objects.create(user=mixologist.user)
-    data = { 'token': token.key }
+    data = { 'token': token.key, 'valid': True }
     return Response(data)
