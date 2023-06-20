@@ -12,7 +12,10 @@ class RecipeView(ViewSet):
     def retrieve(self, request, pk):
         """GET request for single recipe"""
         mixologist = Mixologist.objects.get(user=request.auth.user)
-        recipe = Recipe.objects.annotate(favorites_count=Count('favorites')).get(pk=pk)
+        recipe = Recipe.objects.annotate(
+                favorites_count=Count('favorites'),
+                is_favorite=Count('favorites',filter=Q(favorites=mixologist)
+                )).get(pk=pk)
 
         if recipe.mixologist == mixologist:
             recipe.can_edit = True

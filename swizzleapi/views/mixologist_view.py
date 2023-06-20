@@ -45,13 +45,13 @@ class MixologistView(ViewSet):
     @action(methods=['post', 'put'], detail=True)
     def subscribe(self, request, pk):
         """Post and Put Requests so user can subscribe to other users"""
-        author = Mixologist.objects.get(pk=pk)
+        mixologist = Mixologist.objects.get(pk=pk)
         subscriber = Mixologist.objects.get(pk=request.auth.user.id)
         if request.method == 'POST':
-            Subscription.objects.create(mixologist=author, follower=subscriber, ended_on = None)
-            return Response({'message': 'Subscribed to author!'}, status=status.HTTP_201_CREATED)
+            Subscription.objects.create(mixologist=mixologist, follower=subscriber, ended_on = None)
+            return Response({'message': 'Subscribed to mixologist!'}, status=status.HTTP_201_CREATED)
         elif request.method =='PUT':
-            update_subscription = Subscription.objects.get(mixologist=author, follower=subscriber)
+            update_subscription = Subscription.objects.get(mixologist=mixologist, follower=subscriber)
             update_subscription.ended_on = None
             update_subscription.save()
             return Response({'message': 'Resubscribed!'}, status=status.HTTP_204_NO_CONTENT)
@@ -69,5 +69,5 @@ class MixologistSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Mixologist
-        fields = ('id', 'bio', 'created_on', 'active','subscriptions', 'subscribers', 'subscribed', 'unsubscribed', 'profile_image_url', 'user')
+        fields = ('id', 'active', 'created_on','user', 'bio', 'profile_image_url', 'subscriptions', 'subscribers', 'subscribed', 'unsubscribed')
         depth = 2
