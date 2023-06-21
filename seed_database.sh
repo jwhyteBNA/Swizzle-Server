@@ -6,8 +6,8 @@ rm -rf swizzleapi/migrations
 rm db.sqlite3
 python3 manage.py makemigrations
 python3 manage.py migrate
-python manage.py makemigrations swizzleapi
-python manage.py migrate swizzleapi
+python3 manage.py makemigrations swizzleapi
+python3 manage.py migrate swizzleapi
 python3 manage.py loaddata users
 python3 manage.py loaddata tokens
 python3 manage.py loaddata mixologists
