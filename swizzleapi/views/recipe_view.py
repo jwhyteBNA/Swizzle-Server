@@ -1,11 +1,11 @@
 # from django.http import HttpResponseServerError
 from django.db.models import Q
-from django.db.models import Count
+from django.db.models import Count, Avg
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from rest_framework.decorators import action
-from swizzleapi.models import Recipe, Mixologist, Category, Tag
+from swizzleapi.models import Recipe, Mixologist, Category, Tag, Rating
 
 class RecipeView(ViewSet):
 
@@ -23,6 +23,15 @@ class RecipeView(ViewSet):
             recipe.can_edit = True
         else:
             recipe.can_edit = False
+
+        try:
+            recipe_rating = Rating.objects.get(mixologist=mixologist, recipe=recipe)
+            recipe.user_rating = recipe_rating.rating
+        except Rating.DoesNotExist:
+            recipe.user_rating = None
+
+        avg_rating = Rating.objects.filter(recipe=recipe).aggregate(Avg('rating'))
+        recipe.avg_rating = avg_rating['rating__avg']
 
         serializer = RecipeSerializer(recipe)
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -151,11 +160,29 @@ class RecipeView(ViewSet):
         recipe.favorites.remove(mixologist)
         return Response({'message': 'Recipe unfavorited!'}, status=status.HTTP_204_NO_CONTENT)
 
+    @action(methods=['post', 'put'], detail=True)
+    def rate(self, request, pk):
+        """Post/put request for a user to rate a recipe"""
+        mixologist=Mixologist.objects.get(user=request.auth.user)
+        recipe = Recipe.objects.get(pk=pk)
+        rating_value = request.data.get('rating')
+        if request.method == 'POST':
+            if Rating.objects.filter(mixologist=mixologist, recipe=recipe).exists():
+                return Response({'message: You have already rated this meal.'})
+            else:
+                Rating.objects.create(rating=rating_value, mixologist=mixologist, recipe=recipe)
+                return Response({'message': 'Rating Recorded!'}, status=status.HTTP_201_CREATED)
+        elif request.method =='PUT':
+            update_rating = Rating.objects.get(mixologist=mixologist, recipe=recipe)
+            update_rating.rating=rating_value
+            update_rating.save()
+            return Response({'message': 'Rating Updated!'}, status=status.HTTP_204_NO_CONTENT)
+
 class RecipeSerializer(serializers.ModelSerializer):
     """JSON serializer for posts"""
     class Meta:
         model = Recipe
-        fields = ('id', 'name', 'publication_date', 'image_url', 'ingredients', 'directions', 'notes', 'servings', 'approved', 'can_edit', 'original_link', 'category','tag', 'mixologist', 'favorites', 'is_favorite')
+        fields = ('id', 'name', 'publication_date', 'image_url', 'ingredients', 'directions', 'notes', 'servings', 'approved', 'is_favorite', 'can_edit', 'user_rating', 'avg_rating',  'original_link', 'category','tag', 'mixologist', 'favorites')
         depth = 2
 
 class CreateRecipeSerializer(serializers.ModelSerializer):
